@@ -33,7 +33,8 @@
                                     'object',
                                     'embed',
                                     'video',
-                                    '[contenteditable]'].join(',');
+                                    '[contenteditable]', 
+                                    'video'].join(',');
 
   /**
    * `InertRoot` manages a single inert subtree, i.e. a DOM subtree whose root element has an `inert`
