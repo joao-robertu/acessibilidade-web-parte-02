@@ -23,11 +23,10 @@ btns.forEach(function(btn) {
       noticias.forEach(function(noticia) {
       noticia.style.display = 'none';
 
-      if ( this.getAttribute('data-sliderItem') === noticia.getAttribute('data-noticia') ) 
-      {
+      if ( this.getAttribute('data-sliderItem') === noticia.getAttribute('data-noticia') ) {
         noticia.style.display = 'block'
       }
-    });
+    }.bind(this));
     
     document.querySelector('.listaDeArtigos-slider-item .escondeVisualmente').remove();
     this.append(indicadorSlideAtual);
