@@ -14,9 +14,11 @@ campoEmail.addEventListener('blur', function() {
         secondLevelDomains: secondLevelDomains,
         suggested: function(suggestion) {
             sugestao.style.display = 'inline-block';
-            sugestao.textContent = 'Você quis dizer: ' + suggestion.full + ' ?'
+            sugestao.textContent = 'Você quis dizer: ' + suggestion.full + ' ?';
             sugestao.parentNode.classList.add('contatoCampo--erro');
             campoEmail.classList.add('contatoCampo--validouErro');
+            sugestao.setAttribute('tabindex', '0');
+            sugestao.setAttribute('role', 'alert');
         }
     });
 });
